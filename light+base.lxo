@@ -1,0 +1,14 @@
+AttributeBegin # 
+Translate -10 -10 11
+AreaLightSource "area" "float gain" [30] "color L" [1.0 1.0 1.0]
+Shape "sphere" "float radius" [1.0]
+AttributeEnd # ""
+
+AttributeBegin # 
+Material "matte"
+Shape "disk" "float radius" [100.0] "float height" [0]
+AttributeEnd # ""
+
+AttributeBegin # 
+LightSource "infinite" "color L" [1.0 1.0 1.0] "float gain" [0.1]
+AttributeEnd # ""
