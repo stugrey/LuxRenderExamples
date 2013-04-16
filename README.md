@@ -7,3 +7,7 @@ This project aims to produce a set of LuxRender scene files in the standard luxr
 ## Usage
 
 The examples.lxs file can be opend by LuxRender and shows all of the standard material types applied to geomtric primitives and meshes.  It also includes volumes and light emitting objects.
+
+## Output
+
+![examples](/examples.png "Example Output")
