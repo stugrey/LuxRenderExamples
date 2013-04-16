@@ -10,4 +10,4 @@ The examples.lxs file can be opend by LuxRender and shows all of the standard ma
 
 ## Output
 
-![examples](/examples.png "Example Output")
+![screenshot](/screenshot.png "Example Output")
