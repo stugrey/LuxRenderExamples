@@ -1,0 +1,74 @@
+Sampler "metropolis"
+
+VolumeIntegrator "multi"
+	"float stepsize" [1.000000000000000]
+
+PixelFilter "mitchell" "float xwidth" [2] "float ywidth" [2]
+
+LookAt 0 0 3 0 0 0 0 1 0
+
+Camera "orthographic"
+	"float screenwindow" [0 7 0 4]
+
+Film "fleximage"
+	"integer xresolution" [1400]
+	"integer yresolution" [800]
+	"string filename" ["texture-examples"]
+	"bool premultiplyalpha" ["true"]
+	"bool write_png" ["true"]
+	"string write_png_channels" ["RGB"]
+	"integer displayinterval" [10]
+	"integer writeinterval" [600]
+
+WorldBegin
+
+Include "light+base.lxo"
+
+Texture "checks3d" "float" "checkerboard"
+		"integer dimension" [3]
+		"vector scale" [0.5 0.5 0.5]
+        "float tex1" [1.0]
+        "float tex2" [0.0]
+
+Texture "kd:checks3d" "color" "mix"
+        "texture amount" ["checks3d"]
+        "color tex1" [1 0 0]
+        "color tex2" [0 0 1]
+
+Texture "checks2d" "float" "checkerboard"
+		"integer dimension" [2]
+		"float uscale" [8] 
+		"float vscale" [8]
+        "float tex1" [1.0]
+        "float tex2" [0.0]
+
+Texture "kd:checks2d" "color" "mix"
+        "texture amount" ["checks2d"]
+        "color tex1" [1 0 0]
+        "color tex2" [0 0 1]
+
+AttributeBegin
+Translate 2.0 2.0 0.0
+Material "matte" "texture Kd" "kd:checks3d"
+Shape "sphere" "float radius" 1.0
+AttributeEnd
+
+AttributeBegin
+Translate 2.0 2.0 0.0
+Material "matte" "texture Kd" "kd:checks3d"
+Shape "plymesh" "string filename" ["city.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 5.0 2.0 0.0
+Material "matte" "texture Kd" "kd:checks2d"
+Shape "sphere" "float radius" 1.0
+AttributeEnd
+
+AttributeBegin
+Translate 5.0 2.0 0.0
+Material "matte" "texture Kd" "kd:checks2d"
+Shape "plymesh" "string filename" ["city.ply"]
+AttributeEnd
+
+WorldEnd
