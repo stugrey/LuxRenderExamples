@@ -8,11 +8,11 @@ PixelFilter "mitchell" "float xwidth" [2] "float ywidth" [2]
 LookAt 0 0 3 0 0 0 0 1 0
 
 Camera "orthographic"
-	"float screenwindow" [0 7 0 4]
+	"float screenwindow" [0 7 0 7]
 
 Film "fleximage"
 	"integer xresolution" [1400]
-	"integer yresolution" [800]
+	"integer yresolution" [1400]
 	"string filename" ["texture-examples"]
 	"bool premultiplyalpha" ["true"]
 	"bool write_png" ["true"]
@@ -32,8 +32,8 @@ Texture "checks3d" "float" "checkerboard"
 
 Texture "kd:checks3d" "color" "mix"
         "texture amount" ["checks3d"]
-        "color tex1" [1 0 0]
-        "color tex2" [0 0 1]
+        "color tex1" [1 0.65 0]
+        "color tex2" [0.19 0.15 0.48]
 
 Texture "checks2d" "float" "checkerboard"
 		"integer dimension" [2]
@@ -44,8 +44,24 @@ Texture "checks2d" "float" "checkerboard"
 
 Texture "kd:checks2d" "color" "mix"
         "texture amount" ["checks2d"]
-        "color tex1" [1 0 0]
-        "color tex2" [0 0 1]
+        "color tex1" [1 0.65 0]
+        "color tex2" [0.19 0.15 0.48]
+
+Texture "fractal" "float" "fbm"
+
+Texture "kd:fractal" "color" "mix"
+        "texture amount" ["fractal"]
+        "color tex1" [1 0.65 0]
+        "color tex2" [0.19 0.15 0.48]
+
+Texture "dottexture" "float" "dots"
+        "float uscale" [8] 
+        "float vscale" [8]
+
+Texture "kd:dottexture" "color" "mix"
+        "texture amount" ["dottexture"]
+        "color tex1" [1 0.65 0]
+        "color tex2" [0.19 0.15 0.48]
 
 AttributeBegin
 Translate 2.0 2.0 0.0
@@ -68,6 +84,30 @@ AttributeEnd
 AttributeBegin
 Translate 5.0 2.0 0.0
 Material "matte" "texture Kd" "kd:checks2d"
+Shape "plymesh" "string filename" ["city.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 2.0 5.0 0.0
+Material "matte" "texture Kd" "kd:fractal"
+Shape "sphere" "float radius" 1.0
+AttributeEnd
+
+AttributeBegin
+Translate 2.0 5.0 0.0
+Material "matte" "texture Kd" "kd:fractal"
+Shape "plymesh" "string filename" ["city.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 5.0 5.0 0.0
+Material "matte" "texture Kd" "kd:dottexture"
+Shape "sphere" "float radius" 1.0
+AttributeEnd
+
+AttributeBegin
+Translate 5.0 5.0 0.0
+Material "matte" "texture Kd" "kd:dottexture"
 Shape "plymesh" "string filename" ["city.ply"]
 AttributeEnd
 
