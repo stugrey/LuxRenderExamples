@@ -8,11 +8,11 @@ PixelFilter "mitchell" "float xwidth" [2] "float ywidth" [2]
 LookAt 0 0 3 0 0 0 0 1 0
 
 Camera "orthographic"
-	"float screenwindow" [0 7 0 7]
+	"float screenwindow" [0 7 0 10]
 
 Film "fleximage"
-	"integer xresolution" [1400]
-	"integer yresolution" [1400]
+	"integer xresolution" [700]
+	"integer yresolution" [1000]
 	"string filename" ["texture-examples"]
 	"bool premultiplyalpha" ["true"]
 	"bool write_png" ["true"]
@@ -63,6 +63,11 @@ Texture "kd:dottexture" "color" "mix"
         "color tex1" [1 0.65 0]
         "color tex2" [0.19 0.15 0.48]
 
+Texture "marbletexture" "color" "marble"
+
+Texture "harlequintexture" "color" "harlequin"
+
+
 AttributeBegin
 Translate 2.0 2.0 0.0
 Material "matte" "texture Kd" "kd:checks3d"
@@ -108,6 +113,30 @@ AttributeEnd
 AttributeBegin
 Translate 5.0 5.0 0.0
 Material "matte" "texture Kd" "kd:dottexture"
+Shape "plymesh" "string filename" ["city.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 2.0 8.0 0.0
+Material "matte" "texture Kd" "marbletexture"
+Shape "sphere" "float radius" 1.0
+AttributeEnd
+
+AttributeBegin
+Translate 2.0 8.0 0.0
+Material "matte" "texture Kd" "marbletexture"
+Shape "plymesh" "string filename" ["city.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 5.0 8.0 0.0
+Material "matte" "texture Kd" "harlequintexture"
+Shape "sphere" "float radius" 1.0
+AttributeEnd
+
+AttributeBegin
+Translate 5.0 8.0 0.0
+Material "matte" "texture Kd" "harlequintexture"
 Shape "plymesh" "string filename" ["city.ply"]
 AttributeEnd
 
