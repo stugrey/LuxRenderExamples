@@ -3,16 +3,16 @@ Sampler "metropolis"
 VolumeIntegrator "multi"
 	"float stepsize" [1.000000000000000]
 
-PixelFilter "mitchell" "float xwidth" [2] "float ywidth" [2]
+PixelFilter "gaussian"
 
 LookAt 0 0 3 0 0 0 0 1 0
 
 Camera "orthographic"
-	"float screenwindow" [0 7 0 10]
+	"float screenwindow" [0 4 0 6]
 
 Film "fleximage"
-	"integer xresolution" [700]
-	"integer yresolution" [1000]
+	"integer xresolution" [800]
+	"integer yresolution" [1200]
 	"string filename" ["texture-examples"]
 	"bool premultiplyalpha" ["true"]
 	"bool write_png" ["true"]
@@ -67,77 +67,52 @@ Texture "marbletexture" "color" "marble"
 
 Texture "harlequintexture" "color" "harlequin"
 
-
 AttributeBegin
-Translate 2.0 2.0 0.0
+Translate 1.0 1.0 0.0
+Scale 12 12 12
 Material "matte" "texture Kd" "kd:checks3d"
-Shape "sphere" "float radius" 1.0
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
 AttributeEnd
 
 AttributeBegin
-Translate 2.0 2.0 0.0
-Material "matte" "texture Kd" "kd:checks3d"
-Shape "plymesh" "string filename" ["city.ply"]
-AttributeEnd
-
-AttributeBegin
-Translate 5.0 2.0 0.0
+Translate 3.0 1.0 0.0
+Scale 12 12 12
 Material "matte" "texture Kd" "kd:checks2d"
-Shape "sphere" "float radius" 1.0
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
 AttributeEnd
 
 AttributeBegin
-Translate 5.0 2.0 0.0
-Material "matte" "texture Kd" "kd:checks2d"
-Shape "plymesh" "string filename" ["city.ply"]
-AttributeEnd
-
-AttributeBegin
-Translate 2.0 5.0 0.0
+Translate 1.0 3.0 0.0
+Scale 12 12 12
 Material "matte" "texture Kd" "kd:fractal"
-Shape "sphere" "float radius" 1.0
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
 AttributeEnd
 
 AttributeBegin
-Translate 2.0 5.0 0.0
-Material "matte" "texture Kd" "kd:fractal"
-Shape "plymesh" "string filename" ["city.ply"]
-AttributeEnd
-
-AttributeBegin
-Translate 5.0 5.0 0.0
+Translate 3.0 3.0 0.0
+Scale 12 12 12
 Material "matte" "texture Kd" "kd:dottexture"
-Shape "sphere" "float radius" 1.0
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
 AttributeEnd
 
 AttributeBegin
-Translate 5.0 5.0 0.0
-Material "matte" "texture Kd" "kd:dottexture"
-Shape "plymesh" "string filename" ["city.ply"]
-AttributeEnd
-
-AttributeBegin
-Translate 2.0 8.0 0.0
+Translate 1.0 5.0 0.0
+Scale 12 12 12
 Material "matte" "texture Kd" "marbletexture"
-Shape "sphere" "float radius" 1.0
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
 AttributeEnd
 
 AttributeBegin
-Translate 2.0 8.0 0.0
-Material "matte" "texture Kd" "marbletexture"
-Shape "plymesh" "string filename" ["city.ply"]
-AttributeEnd
-
-AttributeBegin
-Translate 5.0 8.0 0.0
+Translate 3.0 5.0 0.0
+Scale 12 12 12
 Material "matte" "texture Kd" "harlequintexture"
-Shape "sphere" "float radius" 1.0
-AttributeEnd
-
-AttributeBegin
-Translate 5.0 8.0 0.0
-Material "matte" "texture Kd" "harlequintexture"
-Shape "plymesh" "string filename" ["city.ply"]
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
 AttributeEnd
 
 WorldEnd

@@ -1,6 +1,6 @@
 import math
 
-w = open('geometry.lxo', 'w')
+w = open('materials-geometry.lxo', 'w')
 
 materials = [['glass'],
              ['glossy'],
@@ -20,8 +20,8 @@ for cp in carpaints:
 for m in metals:
     materials.append(['metal', '\"string name\" \"' + m + '\"'],)
 
-models = ['Shape \"sphere\" \"float radius\" 1.0',
-          'Shape \"plymesh\" \"string filename\" [\"city.ply\"]']
+models = ['Shape \"plymesh\" \"string filename\" [\"luxball3-outer.ply\"]',
+          'Shape \"plymesh\" \"string filename\" [\"luxball3-inner.ply\"]']
 
 length = len(materials)
 side = int(math.ceil(math.sqrt(length)))
@@ -31,14 +31,15 @@ x = 2.0
 y = 2.0
 
 for mat in materials:
+    w.write("AttributeBegin\n")
+    w.write("Translate " + str(x) + " " + str(y) + " 0.0\n")
+    w.write("Scale 20 20 20\n")
+    w.write("Material \"" + mat[0] + "\"\n")
+    if len(mat) > 1:
+        w.write(mat[1] + "\n")
     for mod in models:
-        w.write("AttributeBegin\n")
-        w.write("Translate " + str(x) + " " + str(y) + " 0.0\n")
-        w.write("Material \"" + mat[0] + "\"\n")
-        if len(mat) > 1:
-            w.write(mat[1] + "\n")
         w.write(mod + "\n")
-        w.write("AttributeEnd\n\n")
+    w.write("AttributeEnd\n\n")
     if x < 12.0:
         x += 3.0
     else:

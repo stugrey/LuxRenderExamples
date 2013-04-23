@@ -1,0 +1,157 @@
+AttributeBegin
+Translate 2.0 2.0 0.0
+Scale 20 20 20
+Material "glass"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 5.0 2.0 0.0
+Scale 20 20 20
+Material "glossy"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 8.0 2.0 0.0
+Scale 20 20 20
+Material "matte"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 11.0 2.0 0.0
+Scale 20 20 20
+Material "mirror"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 14.0 2.0 0.0
+Scale 20 20 20
+Material "roughglass"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 2.0 5.0 0.0
+Scale 20 20 20
+Material "carpaint"
+"string name" "ford f8"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 5.0 5.0 0.0
+Scale 20 20 20
+Material "carpaint"
+"string name" "polaris silber"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 8.0 5.0 0.0
+Scale 20 20 20
+Material "carpaint"
+"string name" "opel titan"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 11.0 5.0 0.0
+Scale 20 20 20
+Material "carpaint"
+"string name" "bmw339"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 14.0 5.0 0.0
+Scale 20 20 20
+Material "carpaint"
+"string name" "2k acrylack"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 2.0 8.0 0.0
+Scale 20 20 20
+Material "carpaint"
+"string name" "white"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 5.0 8.0 0.0
+Scale 20 20 20
+Material "carpaint"
+"string name" "blue"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 8.0 8.0 0.0
+Scale 20 20 20
+Material "carpaint"
+"string name" "blue matte"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 11.0 8.0 0.0
+Scale 20 20 20
+Material "metal"
+"string name" "amorphous carbon"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 14.0 8.0 0.0
+Scale 20 20 20
+Material "metal"
+"string name" "silver"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 2.0 11.0 0.0
+Scale 20 20 20
+Material "metal"
+"string name" "gold"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 5.0 11.0 0.0
+Scale 20 20 20
+Material "metal"
+"string name" "copper"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
+AttributeBegin
+Translate 8.0 11.0 0.0
+Scale 20 20 20
+Material "metal"
+"string name" "aluminium"
+Shape "plymesh" "string filename" ["luxball3-outer.ply"]
+Shape "plymesh" "string filename" ["luxball3-inner.ply"]
+AttributeEnd
+
